@@ -20,7 +20,7 @@ import java.net.URL;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Level;
+import org.apache.logging.log4j.Level;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -213,7 +213,7 @@ public class Quickstart {
   }
 
   public static void main(String[] args) throws Exception {
-    org.apache.log4j.Logger.getRootLogger().setLevel(Level.ERROR);
+    org.apache.logging.log4j.LogManager.getRootLogger().setLevel(Level.ERROR);
     Quickstart st = new Quickstart();
     st.execute();
 

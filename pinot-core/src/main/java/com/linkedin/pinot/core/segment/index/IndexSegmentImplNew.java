@@ -20,7 +20,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.linkedin.pinot.core.startree.StarTreeIndexNode;
-import org.apache.log4j.Logger;
+// import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import com.linkedin.pinot.common.segment.SegmentMetadata;
 import com.linkedin.pinot.core.common.DataSource;
@@ -30,7 +33,7 @@ import com.linkedin.pinot.core.segment.index.column.ColumnIndexContainer;
 
 
 public class IndexSegmentImplNew implements IndexSegment {
-  private static final Logger logger = Logger.getLogger(IndexSegmentImplNew.class);
+  private static final Logger logger = LoggerFactory.getLogger(IndexSegmentImplNew.class);
 
   private final SegmentMetadataImpl segmentMetadata;
   private final Map<String, ColumnIndexContainer> indexContainerMap;
@@ -81,7 +84,7 @@ public class IndexSegmentImplNew implements IndexSegment {
         entry.getValue().unload();
       }
     } catch (Exception e) {
-      logger.error(e);
+      logger.error("{}", e);
     }
   }
 

@@ -44,14 +44,6 @@ public class ScatterGatherPerfServer {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ScatterGatherPerfServer.class);
 
-  /*
-  static
-  {
-    org.apache.log4j.Logger.getRootLogger().addAppender(new ConsoleAppender(
-        new PatternLayout(PatternLayout.TTCC_CONVERSION_PATTERN), "System.out"));
-    org.apache.log4j.Logger.getRootLogger().setLevel(Level.INFO);
-  }
-  */
 
   public static final String RESPONSE_SIZE_OPT_NAME = "response_size";
   public static final String SERVER_PORT_OPT_NAME = "server_port";

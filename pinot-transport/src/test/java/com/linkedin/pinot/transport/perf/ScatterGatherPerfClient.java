@@ -120,14 +120,6 @@ public class ScatterGatherPerfClient implements Runnable {
 
   private AtomicLong _idGen = new AtomicLong(0);
 
-  /*
-  static
-  {
-    org.apache.log4j.Logger.getRootLogger().addAppender(new ConsoleAppender(
-        new PatternLayout(PatternLayout.TTCC_CONVERSION_PATTERN), "System.out"));
-    org.apache.log4j.Logger.getRootLogger().setLevel(Level.INFO);
-  }
-  */
 
   public ScatterGatherPerfClient(RoutingTableConfig config, int requestSize, String resourceName,
       boolean asyncRequestSubmit, int numRequests, int maxActiveConnections, int numReaderThreads) {
